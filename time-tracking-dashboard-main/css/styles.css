@@ -22,26 +22,88 @@ main {
   grid-template-columns: repeat(4, 24%);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 15px;
-  border: red solid 3px;
+  /*   border: red solid 3px; */
   margin: 20% 10%;
 }
 
+.calendar p,
+a {
+  color: hsl(235, 45%, 61%);
+}
+/*------ user card styles* -------*/
+
 .user {
+  display: grid;
+  grid-template-rows: 2.5fr 1.2fr;
   grid-row: span 2;
-  border: white solid 3px;
+  /*  border: white solid 3px; */
+  border-radius: 5%;
+  background-color: hsl(235, 46%, 20%);
 }
 
+.personalInfo {
+  display: grid;
+  grid-template-rows: 0.5fr 0.2fr 1fr;
+  border-radius: 5%;
+  background-color: hsl(246, 80%, 60%);
+}
+
+.userImg {
+  grid-row: span 1;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: hsl(0, 0%, 100%) 2px solid;
+  margin: 7%;
+}
+
+.user h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  padding: 0 0 20% 7%;
+  border: 0 0 5% 5%;
+}
+
+.user p {
+  margin-left: 7%;
+  padding: 0%;
+}
+
+.user ul {
+  grid-row: 2 / span 1;
+  list-style-type: none;
+  background-color: hsl(235, 46%, 20%);
+  padding: 5% 7%;
+}
+
+.user a {
+  text-decoration: none;
+  line-height: 2.5rem;
+}
+
+.user a:hover {
+  color: white;
+}
+
+.user a:active {
+  color: white;
+}
+
+/* ---- TIME-SCHEDULE STYLE ---- */
 .timeschedule {
   display: grid;
-  border: orange solid 3px;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  /*   border: orange solid 3px; */
+  grid-template-rows: 1fr 1.2fr 1fr;
   border-radius: 5%;
+  background-color: hsl(235, 46%, 20%);
 }
 
 .timeschedule span,
 h2,
 p {
-  border: blueviolet solid 3px;
+  /*   border: blueviolet solid 3px;
+ */
+  padding: 5%;
 }
 
 /*  BACKGROUND IMAGES ON EACH TIMESCHUDULE CARD */
@@ -52,8 +114,27 @@ p {
 .exerciseImg,
 .socialImg,
 .selfCareImg {
-  background-position: right;
+  display: grid;
+  grid-template-rows: 0.5fr 0.6fr;
+  grid-row: 2 span;
+  border-radius: 5% 5% 0 0;
+  background-position: right 5px top;
   background-repeat: no-repeat;
+}
+
+.workImg span,
+.playImg span,
+.studyImg span,
+.exerciseImg span,
+.socialImg span,
+.selfCareImg span {
+  display: grid;
+  grid-row: 2 / span 1;
+  grid-template-columns: 1fr 1fr;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 5% 5% 0px 0px;
+  padding: 5%;
+  /*   border: hsl(0, 0%, 100%) solid 3px; */
 }
 
 .workImg {
@@ -87,23 +168,24 @@ p {
 }
 
 /*  HOW THE HELL DO I DO TO SHAPE THE BORDER RADIOUS HERE? */
-.timeschedule span {
-  display: grid;
-  grid-row: 2 / span 1;
-  border-radius: 10% 10% 0 0;
-  grid-template-columns: 1fr 1fr;
-  border: hsl(0, 0%, 100%) solid 3px;
-}
 
 .timeschedule h2 {
   grid-row: 3 / span 1;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding: 0% 5%;
 }
 
 .timeschedule p {
   grid-row: 4 / span 1;
+  padding: 5% 5%;
+  margin-bottom: 6%;
 }
 
 .settings {
   justify-self: flex-end;
+}
+
+.settings:hover {
+  cursor: pointer;
 }

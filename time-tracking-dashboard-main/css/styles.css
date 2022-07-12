@@ -1,0 +1,109 @@
+/* Desktop: 1440px */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Rubik;
+  color: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 15px;
+  border: red solid 3px;
+  margin: 20% 10%;
+}
+
+.user {
+  grid-row: span 2;
+  border: white solid 3px;
+}
+
+.timeschedule {
+  display: grid;
+  border: orange solid 3px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  border-radius: 5%;
+}
+
+.timeschedule span,
+h2,
+p {
+  border: blueviolet solid 3px;
+}
+
+/*  BACKGROUND IMAGES ON EACH TIMESCHUDULE CARD */
+
+.workImg,
+.playImg,
+.studyImg,
+.exerciseImg,
+.socialImg,
+.selfCareImg {
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.workImg {
+  background-image: url("../images/icon-work.svg");
+  background-color: hsl(15, 100%, 70%);
+}
+
+.playImg {
+  background-image: url("../images/icon-play.svg");
+  background-color: hsl(195, 74%, 62%);
+}
+
+.studyImg {
+  background-image: url("../images/icon-study.svg");
+  background-color: hsl(348, 100%, 68%);
+}
+
+.exerciseImg {
+  background-image: url("../images/icon-exercise.svg");
+  background-color: hsl(145, 58%, 55%);
+}
+
+.socialImg {
+  background-image: url("../images/icon-social.svg");
+  background-color: hsl(264, 64%, 52%);
+}
+
+.selfCareImg {
+  background-image: url("../images/icon-self-care.svg");
+  background-color: hsl(43, 84%, 65%);
+}
+
+/*  HOW THE HELL DO I DO TO SHAPE THE BORDER RADIOUS HERE? */
+.timeschedule span {
+  display: grid;
+  grid-row: 2 / span 1;
+  border-radius: 10% 10% 0 0;
+  grid-template-columns: 1fr 1fr;
+  border: hsl(0, 0%, 100%) solid 3px;
+}
+
+.timeschedule h2 {
+  grid-row: 3 / span 1;
+  font-size: 2.2rem;
+}
+
+.timeschedule p {
+  grid-row: 4 / span 1;
+}
+
+.settings {
+  justify-self: flex-end;
+}

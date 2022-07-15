@@ -108,12 +108,7 @@ p {
 
 /*  BACKGROUND IMAGES ON EACH TIMESCHUDULE CARD */
 
-.workImg,
-.playImg,
-.studyImg,
-.exerciseImg,
-.socialImg,
-.selfCareImg {
+.calendarBlock {
   display: grid;
   grid-template-rows: 0.5fr 0.6fr;
   grid-row: 2 span;
@@ -122,19 +117,15 @@ p {
   background-repeat: no-repeat;
 }
 
-.workImg span,
-.playImg span,
-.studyImg span,
-.exerciseImg span,
-.socialImg span,
-.selfCareImg span {
+.blockSpan {
   display: grid;
   grid-row: 2 / span 1;
   grid-template-columns: 1fr 1fr;
   background-color: hsl(235, 46%, 20%);
   border-radius: 5% 5% 0px 0px;
   padding: 5%;
-  /*   border: hsl(0, 0%, 100%) solid 3px; */
+  align-self: flex-end;
+  /*  border: hsl(0, 0%, 100%) solid 3px; */
 }
 
 .workImg {
@@ -188,4 +179,123 @@ p {
 
 .settings:hover {
   cursor: pointer;
+}
+
+/* ------ Mobile: 375px ------ */
+
+@media (max-width: 375px) {
+  .calendar {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(8, 0.7fr);
+    grid-gap: 10px;
+    /*   border: red solid 3px; */
+    margin: 5% 8%;
+    height: 100%;
+  }
+
+  /* Cards positioning */
+
+  .work {
+    grid-row: 2 / span 1;
+  }
+
+  .user {
+    grid-row: span 1;
+    /*  border: white solid 3px; */
+  }
+
+  .personalInfo {
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-columns: 0.5fr 2fr;
+  }
+
+  .userImg {
+    grid-column: span 1;
+    grid-row: span 2;
+    place-self: center center;
+    margin: 4% 4% 4% 60%;
+  }
+
+  .user h3 {
+    font-size: 1.5rem;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    font-weight: 200;
+    padding: 0 0 0% 11%;
+  }
+
+  .user p {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    margin: 20% 0% 0% 11%;
+    padding: 0%;
+  }
+
+  .user ul {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    grid-gap: 10%;
+    /*  padding: 5% 7%; */
+  }
+
+  .user li {
+    display: inline-block;
+    /* grid-row: 2 / span 1;
+    grid-column: 1 / span 1; */
+    margin: 0 7%;
+    /*  padding: 5% 7%; */
+  }
+
+  /* from This point is not currently working as expected */
+
+  /* Here is the design for the background image and the settings menu of each card*/
+
+  .timeschedule {
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 5%;
+  }
+
+  .calendarBlock {
+    display: grid;
+    grid-row: 1 / span 1;
+    grid-column: span 2;
+    grid-template-rows: 0.8fr 1fr;
+    background-position: right 7% top;
+  }
+
+  .blockSpan {
+    grid-row: 2 / span 1;
+    grid-template-rows: 0.5fr 0.4fr;
+    align-self: flex-end;
+    /*  padding: 0% 7%; */
+  }
+
+  .settings {
+    align-self: flex-end;
+    /*  padding: 0% 7%; */
+  }
+  /* Here goes the design for the section assigned to hours and weeks, days or months */
+
+  .timeschedule h2 {
+    grid-row: 2 / span 1;
+    justify-self: flex-start;
+    font-size: 2rem;
+    font-weight: 200;
+    padding: 0% 7%;
+  }
+
+  .timeschedule p {
+    grid-row: 2;
+    justify-self: flex-end;
+    /*  align-self: center; */
+    padding: 0% 7%;
+    margin: 7% 0 0 0;
+  }
+
+  .attribution {
+    grid-row: 8;
+  }
 }
